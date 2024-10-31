@@ -1,0 +1,255 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #003135;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #31708e;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d0dfee;
+}
+
+.navbar .center-title {
+    font-size: 30px;
+    font-family: 'Fabulous 50', cursive;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.navbar-logo {
+    height: 50px;
+    margin-right: 10px;
+  }
+.navbar .center-title i {
+    margin-right: 10px;
+}
+
+.navbar .right-section {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .username {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f6f8f8;
+    margin-right: 15px;
+}
+
+.username {
+    display: flex; /* Enable flexbox for horizontal alignment */
+    align-items: center; /* Vertically aligns the icon and text */
+    font-size: 25px; /* Adjust text size */
+    font-weight: bold; /* Make text bold */
+    color: #f6f8f8; /* Username text color */
+    text-transform: uppercase;
+}
+
+.username-icon {
+    font-size: 40px; /* Adjust size of the icon */
+    margin-right: 10px; /* Add space between icon and username */
+    color: #f6f8f8; /* Icon color (same as text) */
+}
+
+.navbar .logout {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #822d23;
+    border-radius: 5px;
+}
+
+.navbar .logout i {
+    margin-right: 5px;
+}
+
+.navbar .logout:hover {
+    background-color: #964734;
+}
+
+/* Dashboard Structure */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #c3d9ee;
+    width: 300px;
+    padding: 50px;
+    color: #003135;
+}
+/* Sidebar Styling */
+.sidebar {
+    background-color: #c3d9ee;
+    width: 300px;
+    padding: 40px;
+    color: #003135;
+}
+
+.sidebar-choice-container {
+    background-color: #e6f0fa; /* Light background for each container */
+    margin-bottom: 10px; /* Space between each container */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background change on hover */
+}
+
+.sidebar-choice-container a {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    color: #003135; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar-choice-container i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.sidebar-choice-container:hover {
+    background-color: #d3e4f3; /* Change background color on hover */
+}
+
+.sidebar-choice-container a:hover {
+    color: #0fa4af; /* Change text color on hover */
+}
+
+/* User Info Styling */
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-info span {
+    font-size: 22px; /* Username font size */
+    font-weight: bold;
+    text-transform: uppercase; /* Capitalize username */
+    color: #003135; /* Username color */
+    margin-top: 50px;
+    margin-bottom: 30px; /* Space between username and icon */
+}
+
+.user-info i {
+    font-size: 150px; /* Adjust icon size */
+    color: #003135; /* Icon color */
+}
+
+.quote {
+    font-size: 18px; /* Adjust quote size */
+    margin-top: 10px; /* Space between icon and quote */
+    color: #003135;
+    text-align: center; /* Center the quote */
+}
+/* Navigation Links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #003135;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    color: #0fa4af;
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #deeef1;
+}
+
+.analytics {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Analytics Cards */
+.card {
+    background-color: #f9fefe;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer; /* Pointer cursor for clickable cards */
+    position: relative; /* Position for icon placement */
+}
+
+.icon {
+    font-size: 30px; /* Size of icons */
+    position: absolute; /* Positioning of icons */
+    top: 30px; /* Distance from top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center icon */
+}
+
+.card h3 {
+    margin-top: 50px; /* Space for icon */
+    font-size: 22px;
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0fa4af;
+}
+.chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto; /* Center the chart */
+    background-color: #f9fefe;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button, .back {
+    background-color: #31708e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, .back:hover {
+    background-color: #245a6f;
+}
+
+.back-container {
+    display: flex;
+    justify-content: center; /* This will center the button */
+    margin-top: 20px;
+}

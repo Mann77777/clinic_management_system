@@ -1,0 +1,52 @@
+.dashboard-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.chart-container {
+    width: 600px;
+    margin: 20px auto;
+}
+
+.medicine-inventory h2 {
+    text-align: center;
+}
+
+.medicine-inventory table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.medicine-inventory th, .medicine-inventory td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.medicine-inventory th {
+    background-color: #f2f2f2;
+}
+
+.medicine-inventory tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+

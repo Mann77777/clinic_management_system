@@ -1,0 +1,285 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(clinicservices.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+/* Navbar Styles */
+nav {
+    width: 100%;
+    background-color: #31708e;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    height: 100%;
+    padding: 0 20px;
+    color: rgb(211, 227, 238);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #85c0ff;
+}
+
+nav ul li.active a {
+    background-color: #4CAF50;
+}
+
+nav ul li:first-child {
+    margin-right: auto;
+}
+
+.navbar-brand a {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.navbar-logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-family: 'Fabulous 50', cursive;
+    font-size: 1.8rem;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #31708e;
+    z-index: 1001;
+    flex-direction: column;
+    box-shadow: -2px 0 5px rgba(0, 10, 58, 0.5);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-close {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin: 20px 0;
+}
+
+.sidebar-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .showOnMobile {
+        display: block;
+    }
+}
+
+@media (min-width: 801px) {
+    .showOnMobile {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* Ensure the body content doesn't go under the fixed navbar */
+body {
+    padding-top: 80px;
+}
+
+/* Services Section Styles */
+.services-tab {
+    width: 90%;
+    max-width: 800px;
+    background: #d6d9e4;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+    z-index: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Services Section Styles - Upgraded */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(240, 253, 255, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.services-container h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #31708e;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Service Card */
+.service-card {
+    background-color: #cbeff1;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Icon */
+.service-card i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Service Title */
+.service-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Service Description */
+.service-card p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services-container h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+    }
+}

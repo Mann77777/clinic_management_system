@@ -1,0 +1,85 @@
+body {
+    background: linear-gradient(to right, #8fc1e3, #5085a5); /* Add a gradient background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Center the container with a shadow and rounded corners */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+/* Message box styling */
+.message-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Message icon */
+.icon {
+    font-size: 70px;
+    margin-right: 20px;
+}
+
+.message-box.success .icon {
+    color: #28a745; /* Green for success */
+}
+
+.message-box.error .icon {
+    color: #dc3545; /* Red for error */
+}
+
+/* Content section */
+.content {
+    text-align: left;
+}
+
+.content h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.content p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Buttons for success and error */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.success-btn {
+    background: #28a745;
+}
+
+.error-btn {
+    background: #dc3545;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}

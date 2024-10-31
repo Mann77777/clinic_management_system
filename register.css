@@ -1,0 +1,192 @@
+body {
+    min-height: 100vh;
+    background-image: url(bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Roboto Slab', serif; /* Updated Font */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-container {
+    position: absolute; /* Absolute positioning for precise placement */
+    top: 250px;
+    right: 150px;
+    width: 90%;
+    max-width: 550px; /* Limit the maximum width */
+    padding: 50px;
+    background: linear-gradient(105deg,#8fc1e3, #5085a5);
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .register-container {
+        position: relative; /* Use relative positioning for centering */
+        margin: 150px auto; /* Center it horizontally */
+        right: auto; /* Remove the right property */
+        top: auto; /* Remove the top property */
+    }
+}
+
+@media (max-width: 600px) {
+    .register-container {
+        width: 80%; /* Reduce width for smaller screens */
+        padding: 30px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 400px) {
+    .register-container {
+        width: 90%; /* Full width on very small screens */
+        padding: 20px; /* Further reduce padding */
+    }
+}
+.register-container h2 {
+    margin-bottom: 20px;
+    font-weight: 1000; /* Lighter Font Weight */
+    color: #001f2e;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px; /* Increased Margin for Better Spacing */
+    display: flex;
+    align-items: center;
+}
+
+.input-container i {
+    margin-right: 10px;
+    color: #001f2e; /* Darker Icon Color for Better Visibility */
+    font-size: 1rem;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+}
+.register-container input[type="text"],
+.register-container input[type="password"],
+.register-container select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d3e9ff;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.password-container {
+    position: relative; /* Allows positioning of the eye icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+}
+
+.register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    position: relative;
+    color: #ff0000;
+    background-color: #ffdddd;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 0.6s;
+}
+
+.error-message .close-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+}
+.success-message {
+    position: relative;
+    color: #28a745; /* Green color for success */
+    background-color: #d4edda;
+    padding: 10px;
+    border: 1px solid #28a745;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 0.6s;
+}
+
+.success-message .close-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 20px;
+    color: #001f2e;
+}
+
+a {
+    color: #f7fbf7;
+    text-decoration: none;
+    font-weight: 650;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+    .register-container {
+        width: 90%; /* Adjust for smaller screens */
+        padding: 20px;
+    }
+
+    .register-container input[type="text"],
+    .register-container input[type="password"],
+    .register-container select {
+        padding: 8px;
+    }
+
+    .register-button {
+        padding: 8px;
+    }
+}

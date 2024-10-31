@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 20px;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+/* Username and logout/back button styles */
+.username {
+    color: #fff;
+}
+
+.logout, .back {
+    background-color: #ff4c4c;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.logout:hover, .back:hover {
+    background-color: #ff0000;
+}
+
+/* Container styles */
+.container {
+    padding: 20px;
+}
+
+/* Heading styles */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* List styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+ul li a:hover {
+    color: #007BFF;
+}
+
+/* Profile box and patient list box styles */
+.profile-box, .patient-list-box {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.profile-group {
+    margin-bottom: 10px;
+}
+
+.profile-group label {
+    font-weight: bold;
+}
+
+.profile-group p {
+    margin: 5px 0;
+}

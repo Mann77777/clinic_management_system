@@ -1,0 +1,316 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Roboto Slab', serif; /* Updated Font */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar Styles */
+nav {
+    width: 100%;
+    background-color: #31708e;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Enhanced Shadow */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Space between main-nav and sidebar */
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    height: 100%;
+    padding: 0 20px; /* Reduced padding for better spacing */
+    color: rgb(211, 227, 238);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #85c0ff;
+}
+
+nav ul li.active a {
+    background-color: #4CAF50;
+}
+
+nav ul li:first-child {
+    margin-right: auto;
+}
+
+.navbar-brand a {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.navbar-logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-family: 'Fabulous 50', cursive;
+    font-size: 1.8rem;
+}
+
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 20;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #31708e;
+    color: 85c0ff;
+    z-index: 1001;
+    flex-direction: column;
+    box-shadow: -2px 0 5px rgba(0, 10, 58, 0.5);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-close {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin: 20px 0;
+}
+
+.sidebar-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Login Container Styles */
+.login-container {
+    position: absolute; /* Absolute positioning for precise placement */
+    top: 250px;
+    right: 150px;
+    width: 90%;
+    max-width: 550px; /* Limit the maximum width */
+    padding: 50px;
+    background: linear-gradient(105deg, #8fc1e3, #5085a5);
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Center the Login Container for Smaller Screens */
+@media (max-width: 1200px) {
+    .login-container {
+        position: relative; /* Use relative positioning for centering */
+        margin: 150px auto; /* Center it horizontally */
+        right: auto; /* Remove the right property */
+        top: auto; /* Remove the top property */
+    }
+}
+
+@media (max-width: 600px) {
+    .login-container {
+        width: 80%; /* Reduce width for smaller screens */
+        padding: 30px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%; /* Full width on very small screens */
+        padding: 20px; /* Further reduce padding */
+    }
+}
+
+
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-weight: 1000; /* Lighter Font Weight */
+    color: #001f2e;
+}
+
+/* Input Container Styles */
+.input-container {
+    position: relative;
+    margin-bottom: 20px; /* Increased Margin for Better Spacing */
+    display: flex;
+    align-items: center;
+}
+
+.input-container i {
+    margin-right: 10px;
+    color: #001f2e; /* Darker Icon Color for Better Visibility */
+    font-size: 1rem;
+}
+
+.login-container input[type="text"], 
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d3e9ff;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.login-container input[type="text"]:focus, 
+.login-container input[type="password"]:focus {
+    border-color: #4CAF50;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+.toggle-password:hover {
+    color: #000;
+}
+
+/* Error Message Styles */
+.error-message {
+    position: relative;
+    color: #ff0000;
+    background-color: #ffe6e6;
+    padding: 10px 15px;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 0.6s;
+}
+
+.error-message .close-btn {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+    color: #ff0000;
+}
+
+/* Button Styles */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #31708e;
+    border: none;
+    border-radius: 25px; /* Pill-shaped Button */
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #135091;
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Paragraph and Link Styles */
+p {
+    margin-top: 20px;
+    color: #001f2e;
+}
+
+a {
+    color: #f7fbf7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .showOnMobile {
+        display: block;
+    }
+}
+
+@media (min-width: 801px) {
+    .showOnMobile {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* Ensure the body content doesn't go under the fixed navbar */
+body {
+    padding-top: 80px; /* Height of the navbar */
+}
